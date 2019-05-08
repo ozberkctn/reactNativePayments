@@ -62,6 +62,8 @@ NSString * const DEFAULT_BUTTON_STYLE = @"black";
     type = PKPaymentButtonTypeInStore;
   } else if ([buttonType isEqualToString: @"donate"]) {
     type = PKPaymentButtonTypeDonate;
+  } else if ([buttonType isEqualToString: @"book"]) {
+    type = PKPaymentButtonTypeBook;
   } else {
     type = PKPaymentButtonTypePlain;
   }
