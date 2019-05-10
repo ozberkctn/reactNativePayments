@@ -20,7 +20,7 @@ RCT_EXPORT_MODULE()
 - (NSDictionary *)constantsToExport
 {
     return @{
-             @"canMakePayments": @([PKPaymentAuthorizationViewController canMakePayments]),
+             @"canMakePayments":  @([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:[NSArray arrayWithObjects: PKPaymentNetworkAmex, PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, nil]]),
              @"supportedGateways": [GatewayManager getSupportedGateways]
              };
 }
